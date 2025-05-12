@@ -1,0 +1,4 @@
+- Execute run.sh
+- Open docker container in terminal
+- Check that the volume was mounted and the test_file exists and has the same contents as local file: volume_dir/test_file
+- Change the file contents on the container and check it's reflected in the local file
