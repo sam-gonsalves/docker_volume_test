@@ -1,0 +1,16 @@
+volumes:
+  test_volume:
+    driver: local
+    driver_opts:
+      o: "bind"
+      type: "none"
+      # Use the environment variable set by start up script
+      device: "${CURRENT_WORKING_DIRECTORY}/volume_dir"
+
+services:
+  test_service:
+    image: ubuntu:22.04
+    volumes:
+      - test_volume:/app_data
+    stdin_open: true
+    tty: true
